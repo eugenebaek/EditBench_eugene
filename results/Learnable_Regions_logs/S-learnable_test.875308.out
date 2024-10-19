@@ -1,0 +1,70 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.18 (you have 1.4.13). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+INFO:torch.distributed.distributed_c10d:Added key: store_based_barrier_key:1 to store for rank: 0
+INFO:torch.distributed.distributed_c10d:Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/pipelines/pipeline_loading_utils.py:219: FutureWarning: You are loading the variant fp16 from stabilityai/stable-diffusion-2-inpainting via `revision='fp16'` even though you can load it via `variant=`fp16`. Loading model variants via `revision='fp16'` is deprecated and will be removed in diffusers v1. Please use `variant='fp16'` instead.
+  warnings.warn(
+text_encoder/model.safetensors not found
+Initializing diffusion model:  stabilityai/stable-diffusion-2-inpainting
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]An error occurred while trying to fetch /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/vae: Error no file named diffusion_pytorch_model.safetensors found in directory /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/vae.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:02,  2.08it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:01<00:03,  1.12it/s]/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/transformers/models/clip/feature_extraction_clip.py:28: FutureWarning: The class CLIPFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use CLIPImageProcessor instead.
+  warnings.warn(
+An error occurred while trying to fetch /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/unet: Error no file named diffusion_pytorch_model.safetensors found in directory /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/unet.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:03<00:00,  1.45it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:03<00:00,  1.71it/s]
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/functional.py:1892: UserWarning: `eps` parameter is deprecated and has no effect.
+  warnings.warn("`eps` parameter is deprecated and has no effect.")
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/configuration_utils.py:140: FutureWarning: Accessing config attribute `vae_latent_channels` directly via 'VaeImageProcessor' object attribute is deprecated. Please access 'vae_latent_channels' over 'VaeImageProcessor's config object instead, e.g. 'scheduler.config.vae_latent_channels'.
+  deprecate("direct config name access", "1.0.0", deprecation_message, standard_warn=False)
+Traceback (most recent call last):
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/inference.py", line 193, in <module>
+    main(args)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/inference.py", line 134, in main
+    predict(args, model, template, data_loader_test, device_id)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/vis.py", line 90, in predict
+    results = model.module.generate_result(imgs, mask_imgs.to(device_id), e_prompt)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/models/model.py", line 144, in generate_result
+    return generate(imgs, mask_imgs, self.pipe, self.generator, prompts, self.device)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/engine.py", line 51, in generate
+    results = inpaint(pipe, [prompt]*mask_images.shape[0], init_images, mask_images, strength=strength, guidance_scale=guidance_scale, generator=generator, num_samples=num_samples, n_iter=n_iter)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/engine.py", line 20, in inpaint
+    images = pipe(
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_inpaint.py", line 1189, in __call__
+    mask, masked_image_latents = self.prepare_mask_latents(
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_inpaint.py", line 763, in prepare_mask_latents
+    masked_image_latents = self._encode_vae_image(masked_image, generator=generator)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_inpaint.py", line 741, in _encode_vae_image
+    image_latents = retrieve_latents(self.vae.encode(image), generator=generator)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/utils/accelerate_utils.py", line 46, in wrapper
+    return method(self, *args, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 271, in encode
+    h = self.encoder(x)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/models/autoencoders/vae.py", line 172, in forward
+    sample = down_block(sample)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/models/unets/unet_2d_blocks.py", line 1474, in forward
+    hidden_states = resnet(hidden_states, temb=None)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/models/resnet.py", line 327, in forward
+    hidden_states = self.norm1(hidden_states)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/modules/normalization.py", line 273, in forward
+    return F.group_norm(
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/functional.py", line 2530, in group_norm
+    return torch.group_norm(input, num_groups, weight, bias, eps, torch.backends.cudnn.enabled)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 10.12 GiB (GPU 0; 23.70 GiB total capacity; 20.05 GiB already allocated; 1.85 GiB free; 20.36 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
