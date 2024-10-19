@@ -1,0 +1,42 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.18 (you have 1.4.13). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+INFO:torch.distributed.distributed_c10d:Added key: store_based_barrier_key:1 to store for rank: 0
+INFO:torch.distributed.distributed_c10d:Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/pipelines/pipeline_loading_utils.py:219: FutureWarning: You are loading the variant fp16 from stabilityai/stable-diffusion-2-inpainting via `revision='fp16'` even though you can load it via `variant=`fp16`. Loading model variants via `revision='fp16'` is deprecated and will be removed in diffusers v1. Please use `variant='fp16'` instead.
+  warnings.warn(
+unet/diffusion_pytorch_model.safetensors not found
+Initializing diffusion model:  stabilityai/stable-diffusion-2-inpainting
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/transformers/models/clip/feature_extraction_clip.py:28: FutureWarning: The class CLIPFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use CLIPImageProcessor instead.
+  warnings.warn(
+An error occurred while trying to fetch /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/vae: Error no file named diffusion_pytorch_model.safetensors found in directory /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/vae.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00,  5.79it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.40it/s]/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+An error occurred while trying to fetch /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/unet: Error no file named diffusion_pytorch_model.safetensors found in directory /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/unet.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  2.65it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  2.77it/s]
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/nn/functional.py:1892: UserWarning: `eps` parameter is deprecated and has no effect.
+  warnings.warn("`eps` parameter is deprecated and has no effect.")
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/configuration_utils.py:140: FutureWarning: Accessing config attribute `vae_latent_channels` directly via 'VaeImageProcessor' object attribute is deprecated. Please access 'vae_latent_channels' over 'VaeImageProcessor's config object instead, e.g. 'scheduler.config.vae_latent_channels'.
+  deprecate("direct config name access", "1.0.0", deprecation_message, standard_warn=False)
+Traceback (most recent call last):
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/inference.py", line 193, in <module>
+    main(args)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/inference.py", line 134, in main
+    predict(args, model, template, data_loader_test, device_id)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/vis.py", line 91, in predict
+    save_img(args, data_iter_step, results, bboxs, imgs, mask_imgs, e_prompt, o_prompt, img_stem, idx)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/vis.py", line 79, in save_img
+    get_final_img(args, str(img_stem), ori_img_path, new_path, idx)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/utils/post_process.py", line 93, in get_final_img
+    extract_features(model, dino_model, preprocess, input_img_path, edit_img_path, input_text, device)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/utils/post_process.py", line 45, in extract_features
+    edit_img = preprocess(Image.open(img_path)).unsqueeze(0).to(device)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/PIL/Image.py", line 3247, in open
+    fp = builtins.open(filename, "rb")
+IsADirectoryError: [Errno 21] Is a directory: '/shared/s1/lab09/ebench/eugene_outputs/Learnable_Regions/0/results'

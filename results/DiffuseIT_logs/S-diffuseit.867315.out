@@ -1,0 +1,35 @@
+slurmstepd: error: *** JOB 867315 ON b25 CANCELLED AT 2024-10-16T16:12:17 DUE TO NODE FAILURE, SEE SLURMCTLD LOG FOR DETAILS ***
+Using cache found in /home/s1/eugenebaek/.cache/torch/hub/facebookresearch_dino_main
+Using device: cpu
+Start iterations 0
+  0%|          | 0/60 [00:00<?, ?it/s]  0%|          | 0/60 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/main.py", line 33, in <module>
+    image_editor.edit_image_by_prompt(init_image_pil, original_caption, target_caption, task_idx)
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/optimization/image_editor.py", line 289, in edit_image_by_prompt
+    for j, sample in enumerate(samples):
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/guided_diffusion/guided_diffusion/gaussian_diffusion.py", line 542, in p_sample_loop_progressive
+    out = self.p_sample(
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/guided_diffusion/guided_diffusion/gaussian_diffusion.py", line 386, in p_sample
+    out = self.p_mean_variance(
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/guided_diffusion/guided_diffusion/respace.py", line 91, in p_mean_variance
+    return super().p_mean_variance(self._wrap_model(model), *args, **kwargs)
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/guided_diffusion/guided_diffusion/gaussian_diffusion.py", line 240, in p_mean_variance
+    model_output = model(x, self._scale_timesteps(t), **model_kwargs)
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/guided_diffusion/guided_diffusion/respace.py", line 128, in __call__
+    return self.model(x, new_ts, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/guided_diffusion/guided_diffusion/unet.py", line 656, in forward
+    h = module(h, emb)
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/guided_diffusion/guided_diffusion/unet.py", line 77, in forward
+    x = layer(x)
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 443, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 439, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: "unfolded2d_copy" not implemented for 'Half'

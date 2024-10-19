@@ -1,0 +1,47 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.18 (you have 1.4.13). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+INFO:torch.distributed.distributed_c10d:Added key: store_based_barrier_key:1 to store for rank: 0
+INFO:torch.distributed.distributed_c10d:Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/diffusers/pipelines/pipeline_loading_utils.py:219: FutureWarning: You are loading the variant fp16 from stabilityai/stable-diffusion-2-inpainting via `revision='fp16'` even though you can load it via `variant=`fp16`. Loading model variants via `revision='fp16'` is deprecated and will be removed in diffusers v1. Please use `variant='fp16'` instead.
+  warnings.warn(
+text_encoder/model.safetensors not found
+Initializing diffusion model:  stabilityai/stable-diffusion-2-inpainting
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]An error occurred while trying to fetch /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/unet: Error no file named diffusion_pytorch_model.safetensors found in directory /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/unet.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:04,  1.03it/s]/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Loading pipeline components...:  33%|███▎      | 2/6 [00:01<00:02,  1.67it/s]An error occurred while trying to fetch /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/vae: Error no file named diffusion_pytorch_model.safetensors found in directory /home/s1/eugenebaek/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-inpainting/snapshots/76eb2c8bdc2cbaf387603cbae34884c254a05e80/vae.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.48it/s]Loading pipeline components...:  83%|████████▎ | 5/6 [00:02<00:00,  2.49it/s]/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/transformers/models/clip/feature_extraction_clip.py:28: FutureWarning: The class CLIPFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use CLIPImageProcessor instead.
+  warnings.warn(
+Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  2.63it/s]
+/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Traceback (most recent call last):
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/inference.py", line 193, in <module>
+    main(args)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/inference.py", line 134, in main
+    predict(args, model, template, data_loader_test, device_id)
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/vis.py", line 82, in predict
+    for data_iter_step, (img_stem, imgs, o_prompt, e_prompts, idxs) in enumerate(data_loader_test):
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/_utils.py", line 644, in reraise
+    raise exception
+KeyError: Caught KeyError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/s1/eugenebaek/anaconda3/envs/LearnableRegion/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/s1/eugenebaek/EditBench_eugene/Learnable_Regions/utils/util.py", line 62, in __getitem__
+    original_prompt = items[0]['original_caption']
+KeyError: 0
+

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "inference.py", line 12, in <module>
+    free, total = torch.cuda.mem_get_info(torch.device('cuda'))
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/cuda/memory.py", line 591, in mem_get_info
+    device = _get_device_index(device)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/cuda/_utils.py", line 34, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/_utils.py", line 540, in _get_device_index
+    raise ValueError('Expected a torch.device with a specified index '
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda

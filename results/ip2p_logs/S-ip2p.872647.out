@@ -1,0 +1,6 @@
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:01,  2.88it/s]Loading pipeline components...:  43%|████▎     | 3/7 [00:01<00:01,  2.94it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  3.66it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:01<00:00,  4.49it/s]
+Editing from 0!
+Traceback (most recent call last):
+  File "inference.py", line 54, in <module>
+    image_guidance_scale=image_guidance_scale,
+NameError: name 'image_guidance_scale' is not defined

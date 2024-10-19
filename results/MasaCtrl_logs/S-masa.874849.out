@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "playground_real.py", line 9, in <module>
+    from diffusers import DDIMScheduler
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/__init__.py", line 3, in <module>
+    from .configuration_utils import ConfigMixin
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/configuration_utils.py", line 34, in <module>
+    from .utils import (
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/utils/__init__.py", line 38, in <module>
+    from .dynamic_modules_utils import get_class_from_dynamic_module
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/utils/dynamic_modules_utils.py", line 29, in <module>
+    from huggingface_hub import HfFolder, cached_download, hf_hub_download, model_info
+ImportError: cannot import name 'cached_download' from 'huggingface_hub' (/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/huggingface_hub/__init__.py)

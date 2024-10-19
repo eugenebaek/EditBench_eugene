@@ -1,0 +1,10 @@
+/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/transformers/utils/generic.py:482: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/transformers/utils/generic.py:339: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Traceback (most recent call last):
+  File "playground_real.py", line 22, in <module>
+    torch.cuda.set_device(0)  # set the GPU device
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/torch/cuda/__init__.py", line 420, in set_device
+    torch._C._cuda_setDevice(device)
+AttributeError: module 'torch._C' has no attribute '_cuda_setDevice'

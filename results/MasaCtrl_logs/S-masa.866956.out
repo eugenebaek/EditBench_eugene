@@ -1,0 +1,28 @@
+/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11080). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Traceback (most recent call last):
+  File "playground_real.py", line 11, in <module>
+    from masactrl.diffuser_utils import MasaCtrlPipeline
+  File "/home/s1/eugenebaek/EditBench_eugene/MasaCtrl/masactrl/diffuser_utils.py", line 19, in <module>
+    from pytorch_lightning import seed_everything
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/pytorch_lightning/__init__.py", line 27, in <module>
+    from pytorch_lightning.callbacks import Callback  # noqa: E402
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/pytorch_lightning/callbacks/__init__.py", line 14, in <module>
+    from pytorch_lightning.callbacks.batch_size_finder import BatchSizeFinder
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/pytorch_lightning/callbacks/batch_size_finder.py", line 26, in <module>
+    from pytorch_lightning.callbacks.callback import Callback
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/pytorch_lightning/callbacks/callback.py", line 22, in <module>
+    from pytorch_lightning.utilities.types import STEP_OUTPUT
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/pytorch_lightning/utilities/types.py", line 42, in <module>
+    from torchmetrics import Metric
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/torchmetrics/__init__.py", line 30, in <module>
+    from torchmetrics import functional  # noqa: E402
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/torchmetrics/functional/__init__.py", line 122, in <module>
+    from torchmetrics.functional.text._deprecated import _bleu_score as bleu_score
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/torchmetrics/functional/text/__init__.py", line 23, in <module>
+    from torchmetrics.functional.text.sacre_bleu import sacre_bleu_score
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/torchmetrics/functional/text/sacre_bleu.py", line 98, in <module>
+    class _SacreBLEUTokenizer:
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/torchmetrics/functional/text/sacre_bleu.py", line 124, in _SacreBLEUTokenizer
+    (regex.compile(r"(\P{N})(\p{P})"), r"\1 \2 "),
+AttributeError: module 'regex' has no attribute 'compile'

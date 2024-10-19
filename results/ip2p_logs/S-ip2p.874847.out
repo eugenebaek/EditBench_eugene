@@ -1,0 +1,37 @@
+654.75
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:00<00:02,  2.06it/s]Loading pipeline components...:  57%|█████▋    | 4/7 [00:00<00:00,  5.18it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  3.03it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:01<00:00,  4.55it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:01<00:00,  4.10it/s]
+Editing from 0!
+3318.75
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "inference.py", line 61, in <module>
+    edited_image = pipe(prompt,
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_instruct_pix2pix.py", line 421, in __call__
+    noise_pred = self.unet(
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/models/unets/unet_2d_condition.py", line 1216, in forward
+    sample, res_samples = downsample_block(
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/models/unets/unet_2d_blocks.py", line 1288, in forward
+    hidden_states = attn(
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/models/transformers/transformer_2d.py", line 442, in forward
+    hidden_states = block(
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/models/attention.py", line 466, in forward
+    attn_output = self.attn1(
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/models/attention_processor.py", line 490, in forward
+    return self.processor(
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/models/attention_processor.py", line 767, in __call__
+    attention_probs = attn.get_attention_scores(query, key, attention_mask)
+  File "/home/s1/eugenebaek/anaconda3/envs/diffusers_ip2p/lib/python3.8/site-packages/diffusers/models/attention_processor.py", line 570, in get_attention_scores
+    attention_scores = torch.baddbmm(
+RuntimeError: CUDA out of memory. Tried to allocate 11.63 GiB (GPU 0; 23.70 GiB total capacity; 14.45 GiB already allocated; 7.65 GiB free; 14.52 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

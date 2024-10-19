@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "playground_real.py", line 9, in <module>
+    from diffusers import DDIMScheduler
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/__init__.py", line 3, in <module>
+    from .configuration_utils import ConfigMixin
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/configuration_utils.py", line 34, in <module>
+    from .utils import (
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/utils/__init__.py", line 21, in <module>
+    from .accelerate_utils import apply_forward_hook
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/diffusers/utils/accelerate_utils.py", line 24, in <module>
+    import accelerate
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/accelerate/__init__.py", line 16, in <module>
+    from .accelerator import Accelerator
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/accelerate/accelerator.py", line 37, in <module>
+    from .checkpointing import load_accelerator_state, load_custom_state, save_accelerator_state, save_custom_state
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/accelerate/checkpointing.py", line 24, in <module>
+    from .utils import (
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/accelerate/utils/__init__.py", line 34, in <module>
+    from .dataclasses import (
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/accelerate/utils/dataclasses.py", line 406, in <module>
+    class ProfileKwargs(KwargsHandler):
+  File "/home/s1/eugenebaek/anaconda3/envs/masa/lib/python3.8/site-packages/accelerate/utils/dataclasses.py", line 465, in ProfileKwargs
+    def _get_profiler_activity(self, activity: ProfilerActivity) -> torch.profiler.ProfilerActivity:
+AttributeError: module 'torch' has no attribute 'profiler'

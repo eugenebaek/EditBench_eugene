@@ -1,0 +1,13 @@
+Using device: cuda:0
+Traceback (most recent call last):
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/main.py", line 13, in <module>
+    image_editor = ImageEditor(args)
+  File "/home/s1/eugenebaek/EditBench_eugene/DiffuseIT/optimization/image_editor.py", line 107, in __init__
+    torch.load(
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/s1/eugenebaek/anaconda3/envs/DiffuseIT/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/512x512_diffusion.pt'
